@@ -7,12 +7,19 @@
     
     <div class="create-blog content">
         <form>
-        <label for="title">Blog title:</label>
+        <label for="title">Project Title:</label>
         <input type="text" id="title" name="title" required>
-        <label for="snippet">Blog snippet:</label>
-        <input type="text" id="snippet" name="snippet" required>
-        <label for="body">Blog body:</label>
-        <textarea id="body" name="body" required></textarea>
+
+        <label for="descr">Project Description:</label>
+        <textarea type="text" id="descr" name="descr" required></textarea>
+        <!-- id="snippet" -->
+
+        <label type="url">Project URL:</label>
+        <input id="url" name="url" required>
+
+        <label type="url">Git Repository URL:</label>
+        <input id="url" name="url" required>
+        
         <button>Submit</button>
         </form>
     </div>
