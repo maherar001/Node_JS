@@ -1,27 +1,25 @@
-const mongooes = require('mongoose');
-const Schema = mongooes.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const portfolioSchema = new Schema({
     title : {
         type: String,
         required: true
     },
-
     description :{
         type: String,
         required: true
     },
-
-    url : {
-        work: mongoose.SchemaTypes.Url,
+    project_url : {
+        type: String,
         required: true
     },
-
     gitRepository : {
-        work: mongoose.SchemaTypes.Url,
+        type: String,
         required: true
     }
     }, {timestamps: true});
 
-    const Project = mongooes.model('Project', portfolioSchema );
+    const Project = mongoose.model('Project', portfolioSchema );
+
     module.exports = Project;
