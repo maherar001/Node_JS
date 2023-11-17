@@ -6,21 +6,21 @@
     <%- include('./partials/nav.ejs') %>
     
     <div class="create-blog content">
-        <form>
+        <form action="/projects" method="post">
         <label for="title">Project Title:</label>
         <input type="text" id="title" name="title" required>
 
         <label for="descr">Project Description:</label>
-        <textarea type="text" id="descr" name="descr" required></textarea>
+        <textarea type="text" id="descr" name="description" required></textarea>
         <!-- id="snippet" -->
 
-        <label type="url">Project URL:</label>
-        <input id="project_url" name="project_url" required>
+        <label >Project URL:</label>
+        <input type="url" id="project_url" name="project_url" required>
 
-        <label type="url">Git Repository:</label>
-        <input id="gitRepository" name="gitRepository" required>
+        <label type="string">Git Repository:</label>
+        <input type="url id="gitRepository" name="gitRepository" required>
         
-        <button>Submit</button>
+        <button type="submit">Submit</button>
         </form>
     </div>
 

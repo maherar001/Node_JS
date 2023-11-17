@@ -5,17 +5,21 @@
 <body>
     <%- include('./partials/nav.ejs') %>
 
-    <div class="blogs content">
-        <h2>All Blogs</h2>
+    <div class="projects content">
+        <h2>All Projects</h2>
 
-        <% if(blogs.length > 0) { %>
-            <% blogs.forEach(blogs => { %>
-                <h3 class="title"> <%= blogs.title %></h3>
-                <p class="snippet"> <%= blogs.descr %></p>
-                <a href="<%= blogs.project_url %>" target=”_blank” > <%= blogs.url %> </a>
+        <% if(projects.length > 0) { %>
+            <% projects.forEach(projects => { %>
+                <br><br>
+                <a class="single" href="/projects/<%= projects._id %>">
+                    <h3 class="title"> <%= projects.title %></h3>
+                    <p class="descr"> <%= projects.description %></p>
+                </a>
+                <a href="<%= projects.project_url %>" target=”_blank” > <%= projects.project_url %> </a> <br>
+                <a href="<%= projects.gitRepository %>" target=”_blank” > <%= projects.gitRepository %> </a>
             <% }) %>
         <% } else { %>
-            <P>There are no blogs to display...</P>
+            <P>There are no projects to display...</P>
         <% } %>
     </div>
 
