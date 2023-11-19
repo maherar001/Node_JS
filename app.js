@@ -14,6 +14,8 @@ mongooes.connect(dbURI , { useNewUrlParser: true, useUnifiedTopology: true })
 // express app
 const app = express();
 
+const port = 5000;
+
 //register view engine
 app.set('view engine', 'ejs');
 
@@ -34,10 +36,12 @@ app.get('/about',(req, res) =>
     res.render('about', {title: 'About'});
 } );
 
-//prohect routes
+//project routes
 app.use('/projects', projectRoutes);
 
 // 404 not found
 app.use((req, res)=>{
 res.status(404).render('404', {title: 'Error 404'}); 
 });
+
+app.listen(process.env.PORT || port, () => console.log(`listening on port ${port}`));
