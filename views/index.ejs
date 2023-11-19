@@ -10,15 +10,16 @@
 
         <% if(projects.length > 0) { %>
             <% projects.forEach(projects => { %>
-                <br><br>
-                <a class="single" href="/projects/<%= projects._id %>">
-                    <h3 class="title"> <%= projects.title %></h3>
-                    <p class="descr"> <%= projects.description %></p>
-                </a>
-                <a href="<%= projects.project_url %>" target=”_blank” > <%= projects.project_url %> </a> <br>
-                <a href="<%= projects.gitRepository %>" target=”_blank” > <%= projects.gitRepository %> </a>
-            <% }) %>
-        <% } else { %>
+                <div class="single-project">
+                    <a class="single" href="/projects/<%= projects._id %>">
+                        <h3 class="title"> <%= projects.title %></h3>
+                        <p class="descr" > <%= projects.description %></p>
+                    </a>
+                    <a href="<%= projects.project_url %>" target=”_blank” > <%= projects.project_url %> </a>
+                    <a href="<%= projects.gitRepository %>" target=”_blank” > <%= projects.gitRepository %> </a>
+                </div>
+                <% }) %>
+                <% } else { %>
             <P>There are no projects to display...</P>
         <% } %>
     </div>

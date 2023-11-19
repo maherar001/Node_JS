@@ -9,12 +9,10 @@
         <h2> <%= projects.title %> </h2>
         <div class="content">
             <p><%= projects.description %></p>
+            <a href="<%= projects.project_url %>" target=”_blank” > <%= projects.project_url %> </a>
+            <a href="<%= projects.gitRepository %>" target=”_blank” > <%= projects.gitRepository %> </a>
         </div>
-        <div>
-            <p> <%= projects.project_url %> </p>
-            <p> <%= projects.gitRepository %> </p>
-        </div>
-        <a class="delete" data-doc="<%= projects._id %>"> Delete</a>
+        <a class="delete" border="3px"  data-doc="<%= projects._id %>"> Delete</a>
     </div>
     <script>
         const trashcan = document.querySelector('a.delete');

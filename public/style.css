@@ -51,14 +51,50 @@
     }
     .content{
       margin-left: 20px;
+      align-items: center;
     }
 
+    /* about page style */
+    .about-me{
+      margin-left: 10%;
+      align-items: center;
+      text-align: justify;
+      width: 70%;
+    }
+
+    .about-me a{
+      width: 20px;
+      height: 20px;
+      margin-bottom: 60px;
+      padding-left: 10px;
+    }
+
+    .about-me p{
+      margin-top: 70px;
+    }
+    /* Home page style */
+    .single-project
+    {
+      width: 900px;
+      height: 400px;
+      margin: auto;
+      /* border: 3px solid #73AD21; */
+    }
+
+    .single-project p{
+      height: 200px;
+      text-align: justify;
+      box-shadow: 0 2px#777;
+      padding: 2%;
+      Overflow-y:scroll;
+    }
+    
     /* index styles */
     .projects a{
       display: block;
-      margin: 40px 0;
+      margin: 20px 0;
       padding-left: 30px;
-      border-left: 6px solid crimson;
+      border-left: 3px solid crimson;
     }
 
     .projects a:hover h3{
@@ -68,6 +104,26 @@
     /* details styles */
     .details{
       position: relative;
+    }
+
+    .details p{
+      width: 900px;
+      height: auto;
+      align-items: center;
+      text-align: justify;
+      box-shadow: 0 2px#777;
+      padding: 2%;
+    }
+
+    .details a{
+      display: block;
+      margin: 20px 0;
+      padding-left: 30px;
+      border-left: 3px solid crimson;
+    }
+
+    .details a:hover h3{
+      color: crimson;
     }
     .delete{
       position: absolute;
@@ -82,25 +138,25 @@
     }
 
     /* create styles */
-    .create-blog form{
+    .add-project form{
       max-width: 400px;
       margin: 0 auto;
     }
-    .create-blog input,
-    .create-blog textarea{
+    .add-project input,
+    .add-project textarea{
       display: block;
       width: 100%;
       margin: 10px 0;
       padding: 8px;
     }
-    .create-blog label{
+    .add-project label{
       display: block;
       margin-top: 24px;
     }
     textarea{
       height: 120px;
     }
-    .create-blog button{
+    .add-project button{
       margin-top: 20px;
       background: crimson;
       color: white;
